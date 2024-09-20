@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>그니까 Java랑 JS랑 같은거 아님?</title>
+    <meta charset="utf-8">
+    <script>
+        var count = 0;
+        function rainbowattack() {
+            var valuelist = ['무', '지', '개', '색', '총', '공', '격', '이', '다'];
+            var BGcolorlist = ['white', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple', 'black'];
+            count = (count + 1) % 9;
+            var target = document.querySelector('body').style;
+            var target2 = document.querySelector('a').style;
+            var target3 = document.querySelectorAll('.rain');
+            target.backgroundColor = BGcolorlist[count];
+            for (var i = 0; i < target3.length; i++) {
+                target3[i].value = valuelist[count];
+            }
+            if ([0, 2, 3].includes(count)) {
+                target.color = 'black';
+                target2.color = 'blue';
+            } else {
+                target.color = 'white';
+                target2.color = 'powderblue';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <a href="index.html">
+        <h1>그니까 Java랑 JS랑 같은거 아님?</h1>
+    </a>
+    <h2>
+        ch.2-8 함수를 써봐요
+    </h2>
+    <p>
+        <input class="rain" value="무" type="button" onclick="rainbowattack()"><br>
+        <input class="rain" value="무" type="button" onclick="rainbowattack()"><br>
+        <input class="rain" value="무" type="button" onclick="rainbowattack()"><br>
+        <input class="rain" value="무" type="button" onclick="rainbowattack()"><br>
+        <input class="rain" value="무" type="button" onclick="rainbowattack()"><br>
+        <input class="rain" value="무" type="button" onclick="rainbowattack()"><br>
+        <input class="rain" value="무" type="button" onclick="rainbowattack()"><br>
+        <input class="rain" value="무" type="button" onclick="rainbowattack()"><br>
+        함수를 쓰면 버튼이 복사가 된다고?????<br>
+        이거 2-7완전 초기코드 기준으로 똑같은거 만드려면 코드를 350줄을 썼어야 했을텐데..<br>
+        역시 함수는 신이며 무적인 것이다!<br>
+    </p>
+</body>
+
+</html>
