@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>그니까 Java랑 JS랑 같은거 아님?</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <a href="index.html">
+        <h1>그니까 Java랑 JS랑 같은거 아님?</h1>
+    </a>
+    <h2>
+        ch.2-9 큰일이다..객체가 뭔지 모르겠다
+    </h2>
+    <p>
+        일단 객체를 만들어보자.
+    </p>
+    <script>
+        var person = {
+            name: '최동영',
+            age: 22,
+            introduce() {
+                return ('name: ' + this.name + '<br>age ' + this.age)
+            }
+        }
+    </script>
+    <p>
+        아마 화면상 달라진건 없겠지.. 다만 이렇게 한다면
+    </p>
+    <script>
+        document.write(person.introduce())
+    </script>
+    <p>
+        무언가 되었다. 프로토타입을 하나 만들어 놓고, 빼다가 쓰는 식으로 쓰면 편하다고 한다..<br>
+        this 라는 키워드가 상당히 유용한 것 같다.<br>
+        <a href="https://helloworldjavascript.net/pages/180-object.html">이 사이트</a>를 참고했다.<br>
+        원래는 생활코딩 강의만으로 충분했는데, 이번엔 아니였던듯.. 강의가 다좋은데 내용 자체가 너무 적다.
+    </p>
+
+</body>
+
+</html>
