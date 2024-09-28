@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>그니까 Java랑 JS랑 같은거 아님?</title>
+    <meta charset="utf-8">
+    <script>
+        var a = 0;
+        var b = 0;
+
+        function updateSum() {
+            a = parseInt(document.getElementById('input1').value) || 0;
+            b = parseInt(document.getElementById('input2').value) || 0;
+            document.getElementById('result').innerText = a + b;
+        }
+    </script>
+</head>
+
+<body>
+    <a href="index.html">
+        <h1>그니까 Java랑 JS랑 같은거 아님?</h1>
+    </a>
+    <h2>
+        ch.2-11 입력을 받고 계산해요(하고싶었어요 ㅅㅂ)
+    </h2>
+    <p>
+        아니 원래 math메소드들 실험하려고 한건데 일이 커짐<br>
+        챗지피티한테 물어보니까 아직 나한테 이른거 같다. 일단 그대로 복사 붙여넣기 하고, 다음에 다시 돌아와서 이해해보자.
+    </p>
+    <input class="input" id="input1" type="number" min="0" max="256" value="0" onchange="updateSum()">
+    <input class="input" id="input2" type="number" min="0" max="256" value="0" onchange="updateSum()">
+    <h3>결과: <span id="result">0</span></h3>
+</body>
+
+</html>
